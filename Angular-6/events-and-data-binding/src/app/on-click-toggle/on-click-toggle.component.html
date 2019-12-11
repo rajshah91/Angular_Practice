@@ -1,0 +1,10 @@
+<div>
+    <p>User Id : 1</p>
+    <p>User Name : Shailee</p>
+    <span  *ngIf="isToggle">
+        <p>Phone : 12345676</p>
+        <p>Address : Pune</p>
+    </span>
+
+    <button (click)="toggleData()">{{ this.toggleTitle }}</button>
+</div>

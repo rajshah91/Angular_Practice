@@ -1,0 +1,83 @@
+1) To create new project..
+
+   -->Go to directory in which you want to create a project
+   -->Open CMD over there
+   -->Write :  ng new project-name
+   This will create basic project structure into this directory.
+   
+2) In project,if you want to create a new component then 
+
+  -->Go to that project directory
+  -->Open CMD over there
+  -->Write :  ng generate component component-name  OR ng g c component-name
+  
+3) In project,if you want to create a new module then
+	
+  -->Go to that project directory
+  -->Open CMD over there
+  -->Write : ng generate module module-name
+  
+4) In project,if you want to create a new component inside other module(default module will be root module..any component if you create,will be created into root module by default) then 
+	
+  -->Go to that project directory
+  -->Open CMD over there
+  -->Write : ng generate component module-name/component-name
+  
+5)In project,if you want to create a service then 
+	
+  -->Go to that project directory
+  -->Open CMD over there
+  -->Write : ng generate service service-name
+  
+6)If you want your project to be routing enabled in it,you can do it while creating project itself using angular CLI
+   -->Go to directory in which you want to create a project
+   -->Open CMD over there
+   -->Write :  ng new project-name --routing
+  
+  
+  ------------------------------------------------------------------------------------
+  Notes
+  
+1) Here are some commonly used annotatations
+  
+  1) @Component  -- Means it is an Angular component
+  2) @Module     -- Means it is an Angular module
+  3) @Injectable -- Means it is an Angular service
+  
+2) In app.module.ts file or any other module's .ts file,you will find below entries inside @NgModule annotatation.
+ 
+  --> In declaration property,all the component list will be there
+  --> In imports property,all the module list will be there
+  --> In providers,all the service list will be there
+
+3) Services in Angular are not rectricted to any module/component.They can be used anywhere inside project.Example if service is create in root directory then even it can be used into inner module/other component without importing since it is available to every component.(This is not the case with inner module /component.It must be exported where it is declared and must be imported where it is to be used)
+
+4) How to Build Angular Project
+
+-->    By default,angular project runs on locally(development mode).So there are lot of large file (js,css,etc).Somehow they need to be minified if we are uploading project to production environment.So in order to do that,we have to build our project.Here are steps :
+
+  First 
+  --> Go to CMD
+  
+  --> Type command : npm install http-server -g (This will install http-server locally as if our project is running on production. and -g is means 	 this is available globally ie. in any directory )
+  
+  --> Now go to Angular project directory and fire this command : ng build --prod (this will convert our project into simple html,js,css files (minified) and make it available for use.Files will go into "dist" directory of project.
+  
+  --> Now,to check if our project works into production like environment(locally) or not,we have to do fire below command :
+  "http-server dist/project-name"   --> this will create sample http server for production like URL and you can check files over there.
+  
+-->   You are not using ng-serve here since it is production like environment.So you can provide dist URL for testing when you are developing/modifyng your project locally via ng-serve.Any change into code will not make any impact on dist(production) url.
+
+5)Introduction to routing in Angular
+	Routing can be done in 2 ways in Agular :
+	1)URL Based routing 
+	2)Component Based routing
+
+6) Routing in Angular :
+
+   --> Define your route URLs
+   --> Create Angular Component for each view(one for each route)
+   --> Configure Angular to map route URLs to components
+
+
+Steps 

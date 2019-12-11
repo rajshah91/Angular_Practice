@@ -1,0 +1,46 @@
+<h1>Example of Routing :</h1>
+<p>On main page,there is no content</p>
+
+<p>In order to check whether routing works or not,do the following</p>
+<p>Take above URL from browser and add "/home" OR "/contact" OR "/setting" into that URL
+  and hit Enter button
+</p>
+
+<div style="background-color: burlywood;">
+  <p>
+    Here you might have question that when we hit above URL
+    then where that component will load its html content ?
+    So simple answer is : in "router-outlet" tag.That is why it is there
+    <br /><br />
+  </p>
+
+  <router-outlet></router-outlet>
+</div>
+
+<hr>
+<h1>Example of showing navigation for routings</h1>
+
+<div>
+  <h3>If you click any of below 2 URLs,it will load content of that page 
+    by refreshing whole page.Which is not feasible in Single Page Application </h3>
+  <a href="home" >Home</a><br/>
+  <a href="contact" >Contact</a><br/><br/>
+</div>
+
+<div>
+    <h3>If you click any of below 2 URLs,it will load content of that page 
+        without refreshing  page.That is what we want :-) <br/>
+        <b><u>routerLink</u></b> property is used for that purpose instead of href.
+      </h3>
+      <a routerLink="home" >Home</a><br/>
+      <a routerLink="contact" >Contact</a><br/><br/>
+
+      <p>Done in different way (Check the code)</p>
+      <a [routerLink]="homeRoute" >Home</a><br/>
+      <a [routerLink]="contactRoute" >Contact</a><br/>
+      <a [routerLink]="settingRoute" >Setting</a><br/><br/>
+
+      <p>Done in different way (Check the code)</p>
+      <a *ngFor="let route of routes" [routerLink]="route.URL" >{{ route.linkName }}<br/></a>
+</div>
+<br />

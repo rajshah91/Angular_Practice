@@ -1,0 +1,11 @@
+<p>Enter User Name <input type="text" [(ngModel)]="username"/></p>
+
+<button (click)="searchRepo()">Search User Repo</button>
+
+<h2>User Details :</h2>
+<p>User Login : {{ apiResponse?.login }}</p>
+<p>User ID : {{ apiResponse?.id }}</p>
+<p>User Name : {{ apiResponse?.name }}</p>
+<p>User Type : {{ apiResponse?.type }}</p>
+<p>User Following : {{ apiResponse?.following }}</p>
+<p>User Public Repos : {{ apiResponse?.public_repos }}</p>

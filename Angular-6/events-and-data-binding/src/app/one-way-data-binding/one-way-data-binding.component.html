@@ -1,0 +1,18 @@
+<input type="text" value="textInput" style="width:  20%;"> This does nothing <br/>
+
+<input type="text" [value]="textInput" style="width:  20%;">
+{{ textInput}} 
+(This is one way data binding and that is why value of text not getting changed if we change input)
+
+<br/>
+
+<input type="text" ngModel="textInput" style="width:  20%;">
+{{ textInput}}  (Only ngModel does nothing...check backend code to see the difference )
+<br/>
+
+<input type="text" [ngModel]="textInput" style="width:  20%;">
+{{ textInput}} 
+(This is one way data binding and that is why value of text not getting changed if we change input)
+
+<br/><br/>
+<b>Note : to make [ngModel] to work,you first need to import "FormsModule" in app.module.ts file.</b>
