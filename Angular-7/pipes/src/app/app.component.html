@@ -1,0 +1,49 @@
+<h1>What is Pipe in Angular ?</h1>
+<p>Pipe takes integers, strings, arrays, and date as input separated with |. It transforms the data in the format as
+  required and displays the same in the browser.</p>
+
+Angular 7 provides some built-in pipes:
+<ul>
+  <li>Lowercasepipe</li>
+  <li>Uppercasepipe</li>
+  <li>Datepipe</li>
+  <li>Currencypipe</li>
+  <li>Jsonpipe</li>
+  <li>Percentpipe</li>
+  <li>Decimalpipe</li>
+  <li>Slicepipe</li>
+</ul>
+
+
+<div style="width:100%;">
+  <div style="width:40%;float:left;border:solid 1px black;">
+    <h1>Uppercase Pipe</h1>
+    <b>{{title | uppercase}}</b><br />
+    <h1>Lowercase Pipe</h1>
+    <b>{{title | lowercase}}</b>
+    <h1>Currency Pipe</h1>
+    <b>{{6589.23 | currency:"USD"}}</b><br />
+    <b>{{6589.23 | currency:"USD":true}}</b>
+    //Boolean true is used to get the sign of the currency. <br />
+    <b>{{6589.23 | currency:"USD":false}}</b>
+    //Boolean false is used to get the Name of the currency.
+    <h1>Date pipe</h1>
+    <b>{{todaydate | date:'d/M/y'}}</b><br />
+    <b>{{todaydate | date:'shortTime'}}</b>
+    <h1>Decimal Pipe</h1>
+    <b>{{ 454.78787814 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers to be displayed.
+  </div>
+  <div style="width:40%;float:left;border:solid 1px black;">
+    <h1>Json Pipe</h1>
+    <b>{{ jsonval | json }}</b>
+    <h1>Percent Pipe</h1>
+    <b>{{00.54565 | percent}}</b>
+    <h1>Slice Pipe</h1>
+    <b>{{months | slice:2:6}}</b>
+    // here 2 and 6 refers to the start and the end index
+    <hr />
+    <h1 style="background-color: red;">Example of Custom Pipe</h1>
+    <h2>Square root of 625 is: {{625 | sqrt}}</h2>
+    <h2>Square root of 169 is: {{169 | sqrt}}</h2>
+  </div>
+</div>
